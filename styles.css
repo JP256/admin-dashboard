@@ -139,3 +139,22 @@ button:active {
   background-color: #0284c7;
   color: #fff;
 }
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.your_project {
+  grid-column: span 7;
+  font-weight: bold;
+  background-color: red;
+}
+.announcements {
+  grid-column: 8 / -1;
+  grid-row: 1;
+  background-color: yellow;
+}
+.card {
+  background-color: whitesmoke;
+  /* margin-bottom: 10px; */
+}
