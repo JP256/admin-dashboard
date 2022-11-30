@@ -7,11 +7,12 @@ body {
   background-color: #cbd5e1;
   font-family: "Roboto", sans-serif;
 }
+
 /* CONTAINER  */
 .container {
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) 5fr;
-  grid-template-rows: 100vh;
+  grid-template-columns: 200px 3fr;
+  grid-template-rows: minmax(100vh, 1fr);
 }
 
 /* ASIDE  */
@@ -55,6 +56,7 @@ body {
   display: grid;
   grid-template-rows: 170px 1fr;
 }
+
 .nav {
   background-color: whitesmoke;
   box-shadow: 0 1px 10px grey;
@@ -65,10 +67,7 @@ body {
   align-items: center;
   gap: 10px;
 }
-.magnifier {
-  justify-self: end;
-  grid-column: 1;
-}
+
 .search {
   grid-column: span 7;
   border-radius: 20px;
@@ -139,22 +138,107 @@ button:active {
   background-color: #0284c7;
   color: #fff;
 }
-
+/* SECTION  */
 .section {
+  margin: 10px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  gap: 10px;
+}
+.section p {
+  font-size: 13px;
+  color: grey;
 }
 .your_project {
-  grid-column: span 7;
-  font-weight: bold;
-  background-color: red;
+  grid-column: span 5;
 }
 .announcements {
-  grid-column: 8 / -1;
+  grid-column: 9 / -1;
   grid-row: 1;
-  background-color: yellow;
+  font-weight: bold;
 }
 .card {
   background-color: whitesmoke;
-  /* margin-bottom: 10px; */
+  border-left: 3px solid gold;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.card-one {
+  grid-column: 1/5;
+  grid-row: 2/5;
+}
+.card-two {
+  grid-column: 5/9;
+  grid-row: 2/5;
+}
+.card-three {
+  grid-row: 5/8;
+  grid-column: 1/5;
+}
+.card-four {
+  grid-row: 5/8;
+  grid-column: 5/9;
+}
+.card-five {
+  grid-row: 8/11;
+  grid-column: 1/5;
+}
+.card-six {
+  grid-row: 8/11;
+  grid-column: 5/9;
+}
+/* Announcements */
+.announcements_card {
+  padding: 10px;
+  border-radius: 10px;
+  grid-row: 2/7;
+  grid-column: 9/20;
+  background-color: whitesmoke;
+}
+hr {
+  margin: 14px 0;
+}
+.your_project,
+.announcements,
+.trending {
+  align-self: center;
+}
+/* trending  */
+.trending {
+  font-weight: bold;
+  margin-bottom: 10px;
+  grid-row: 7;
+  grid-column: 9/20;
+}
+.trending_container {
+  grid-column: 9/20;
+  grid-row: 8/13;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 50px 50px 50px;
+}
+.trending_card {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: 20px 20px;
+}
+.trending_card img {
+  width: 60px;
+  border-radius: 10%;
+}
+.name {
+  align-self: end;
+  font-weight: bold;
+}
+#name {
+  color: #000;
+}
+.imgs {
+  grid-row: span 2;
+  align-self: center;
 }
